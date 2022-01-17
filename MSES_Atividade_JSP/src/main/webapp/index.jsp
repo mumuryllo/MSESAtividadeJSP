@@ -27,7 +27,25 @@
 							 }else{
 							     out.println(new java.util.Date());
 							 }%> </h1>
+							 
+							 
+							 <%! boolean Segunda=true; %>
+<% boolean segundafeira = true; %>
 
+<%!
+String day(){
+	java.text.SimpleDateFormat dt = new java.text.SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+	return dt.format(new java.util.Date());
+	}
+%>
+
+
+
+<h1> A data de amanha e : <% if (segundafeira){
+							 out.println(today());
+							 }else{
+							     out.println("nao e segunda feira");
+							 }%> </h1>
 
 
 </body>
